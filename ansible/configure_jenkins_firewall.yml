@@ -1,0 +1,12 @@
+---
+- name: Add firewall ports for Jenkins
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Adding 8080/tcp for jenkins
+      firewalld:
+        port: 8080/tcp
+        permanent: yes
+        state: enabled

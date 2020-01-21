@@ -1,0 +1,10 @@
+---
+- name: install chrome
+  hosts: ubuntu
+  connection: ssh
+  gather_facts: yes
+  become: yes
+  vars:
+    selenium_install_chrome: yes
+  roles:
+    - role: arknoll.selenium

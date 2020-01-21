@@ -1,0 +1,16 @@
+---
+- name: Intall jenkins
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+  become: yes
+  vars:
+    jenkins_hostname: jenkins.mobius.lab
+    jenkins_http_port: 8080
+    jenkins_admin_username: mobius
+  vars_prompt:
+    - name: jenkins_admin_password
+      prompt: Jenkins Admin Password
+      unsafe: yes
+  roles:
+    - role: geerlingguy.jenkins

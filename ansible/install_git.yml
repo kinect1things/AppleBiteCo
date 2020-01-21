@@ -1,0 +1,9 @@
+---
+- name: Install git
+  hosts: ubuntu
+  become: yes
+  gather_facts: yes
+  vars:
+    ansible_become_pass: P3n!$$$
+  roles:
+    - role: geerlingguy.git
