@@ -1,0 +1,10 @@
+---
+- name: ping
+  vars_prompt:
+    - name: server_name
+      prompt: Server Name
+      private: no
+  hosts: '{{ server_name }}'
+  tasks:
+    - name: Pinging '{{ server_name }}'
+      ping:

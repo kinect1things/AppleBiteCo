@@ -1,5 +1,6 @@
 [control]
 127.0.0.1
-
 [ubuntu]
 yubuntu.mobius.lab
+[centos]
+seven.mobius.lab

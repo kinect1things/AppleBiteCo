@@ -4,6 +4,7 @@
   connection: local
   gather_facts: no
   become: yes
+  vars:
   tasks:
     - name: Adding 8080/tcp for jenkins
       firewalld:

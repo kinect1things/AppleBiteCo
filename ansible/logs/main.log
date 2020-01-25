@@ -1,0 +1,525 @@
+2020-01-21 20:54:18,043 p=7316 u=mobius n=ansible | seven.mobius.lab | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2020-01-24 08:27:53,831 p=10349 u=mobius n=ansible | seven.mobius.lab | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2020-01-24 08:28:44,944 p=10405 u=mobius n=ansible | PLAY [Install docker] ************************************************************************************************************************************************************************************************************************
+2020-01-24 08:28:44,960 p=10405 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 08:28:46,698 p=10405 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 08:28:46,721 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 08:28:46,998 p=10405 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/setup-RedHat.yml for seven.mobius.lab
+2020-01-24 08:28:47,024 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure old versions of Docker are not installed.] *****************************************************************************************************************************************************************
+2020-01-24 08:28:49,167 p=10405 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 08:28:49,189 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker GPG key.] **********************************************************************************************************************************************************************************************
+2020-01-24 08:28:50,607 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:28:50,629 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker repository.] *******************************************************************************************************************************************************************************************
+2020-01-24 08:28:51,447 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:28:51,469 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Edge repo.] **************************************************************************************************************************************************************************************
+2020-01-24 08:28:52,076 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:28:52,099 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Test repo.] **************************************************************************************************************************************************************************************
+2020-01-24 08:28:52,505 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:28:52,527 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Install containerd separately (CentOS 8).] ************************************************************************************************************************************************************************
+2020-01-24 08:28:52,567 p=10405 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 08:28:52,589 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 08:28:52,628 p=10405 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 08:28:52,650 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker.] **************************************************************************************************************************************************************************************************
+2020-01-24 08:29:47,647 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:29:47,680 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure Docker is started and enabled at boot.] ********************************************************************************************************************************************************************
+2020-01-24 08:29:53,701 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:29:53,702 p=10405 u=mobius n=ansible | RUNNING HANDLER [geerlingguy.docker : restart docker] ****************************************************************************************************************************************************************************************
+2020-01-24 08:29:55,821 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:29:55,843 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 08:29:55,916 p=10405 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/docker-compose.yml for seven.mobius.lab
+2020-01-24 08:29:55,945 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Check current docker-compose version.] ****************************************************************************************************************************************************************************
+2020-01-24 08:29:56,525 p=10405 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 08:29:56,547 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Delete existing docker-compose version if it's different.] ********************************************************************************************************************************************************
+2020-01-24 08:29:56,588 p=10405 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 08:29:56,611 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker Compose (if configured).] **************************************************************************************************************************************************************************
+2020-01-24 08:29:58,330 p=10405 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 08:29:58,352 p=10405 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 08:29:58,391 p=10405 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 08:29:58,393 p=10405 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 08:29:58,394 p=10405 u=mobius n=ansible | seven.mobius.lab           : ok=13   changed=8    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-01-24 09:04:18,159 p=10597 u=mobius n=ansible | PLAY [Install docker] ************************************************************************************************************************************************************************************************************************
+2020-01-24 09:04:18,175 p=10597 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 09:04:20,269 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:20,292 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:04:20,479 p=10597 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/setup-RedHat.yml for seven.mobius.lab
+2020-01-24 09:04:20,507 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure old versions of Docker are not installed.] *****************************************************************************************************************************************************************
+2020-01-24 09:04:21,626 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:21,650 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker GPG key.] **********************************************************************************************************************************************************************************************
+2020-01-24 09:04:22,562 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:22,586 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker repository.] *******************************************************************************************************************************************************************************************
+2020-01-24 09:04:23,372 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:23,396 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Edge repo.] **************************************************************************************************************************************************************************************
+2020-01-24 09:04:24,001 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:24,025 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Test repo.] **************************************************************************************************************************************************************************************
+2020-01-24 09:04:24,419 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:24,443 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Install containerd separately (CentOS 8).] ************************************************************************************************************************************************************************
+2020-01-24 09:04:24,482 p=10597 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:04:24,506 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:04:24,544 p=10597 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:04:24,567 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker.] **************************************************************************************************************************************************************************************************
+2020-01-24 09:04:25,217 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:25,241 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure Docker is started and enabled at boot.] ********************************************************************************************************************************************************************
+2020-01-24 09:04:26,177 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:26,201 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:04:26,267 p=10597 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/docker-compose.yml for seven.mobius.lab
+2020-01-24 09:04:26,296 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Check current docker-compose version.] ****************************************************************************************************************************************************************************
+2020-01-24 09:04:26,866 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:26,890 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Delete existing docker-compose version if it's different.] ********************************************************************************************************************************************************
+2020-01-24 09:04:26,928 p=10597 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:04:26,952 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker Compose (if configured).] **************************************************************************************************************************************************************************
+2020-01-24 09:04:28,009 p=10597 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:04:28,051 p=10597 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:04:28,090 p=10597 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:04:28,114 p=10597 u=mobius n=ansible | TASK [Creating docker network] ***************************************************************************************************************************************************************************************************************
+2020-01-24 09:04:28,801 p=10597 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker (Python >= 2.7) or docker-py (Python 2.6)) on seven.mobius.lab's Python /usr/bin/python. Please read module documentation and install in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` or `pip install docker-py` (Python 2.6). The error was: No module named docker"}
+2020-01-24 09:04:28,803 p=10597 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 09:04:28,803 p=10597 u=mobius n=ansible | seven.mobius.lab           : ok=12   changed=0    unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+2020-01-24 09:05:17,687 p=10730 u=mobius n=ansible | PLAY [Install docker] ************************************************************************************************************************************************************************************************************************
+2020-01-24 09:05:17,703 p=10730 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 09:05:19,215 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:19,240 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:05:19,423 p=10730 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/setup-RedHat.yml for seven.mobius.lab
+2020-01-24 09:05:19,451 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure old versions of Docker are not installed.] *****************************************************************************************************************************************************************
+2020-01-24 09:05:20,516 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:20,540 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker GPG key.] **********************************************************************************************************************************************************************************************
+2020-01-24 09:05:21,362 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:21,386 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker repository.] *******************************************************************************************************************************************************************************************
+2020-01-24 09:05:22,197 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:22,221 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Edge repo.] **************************************************************************************************************************************************************************************
+2020-01-24 09:05:22,834 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:22,858 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Test repo.] **************************************************************************************************************************************************************************************
+2020-01-24 09:05:23,262 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:23,287 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Install containerd separately (CentOS 8).] ************************************************************************************************************************************************************************
+2020-01-24 09:05:23,325 p=10730 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:05:23,349 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:05:23,388 p=10730 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:05:23,411 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker.] **************************************************************************************************************************************************************************************************
+2020-01-24 09:05:24,071 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:24,096 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure Docker is started and enabled at boot.] ********************************************************************************************************************************************************************
+2020-01-24 09:05:25,034 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:25,060 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:05:25,126 p=10730 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/docker-compose.yml for seven.mobius.lab
+2020-01-24 09:05:25,156 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Check current docker-compose version.] ****************************************************************************************************************************************************************************
+2020-01-24 09:05:25,731 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:25,756 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Delete existing docker-compose version if it's different.] ********************************************************************************************************************************************************
+2020-01-24 09:05:25,795 p=10730 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:05:25,820 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker Compose (if configured).] **************************************************************************************************************************************************************************
+2020-01-24 09:05:26,786 p=10730 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 09:05:26,825 p=10730 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 09:05:26,863 p=10730 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 09:05:26,887 p=10730 u=mobius n=ansible | TASK [Creating docker network] ***************************************************************************************************************************************************************************************************************
+2020-01-24 09:05:27,567 p=10730 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker (Python >= 2.7) or docker-py (Python 2.6)) on seven.mobius.lab's Python /usr/bin/python. Please read module documentation and install in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` or `pip install docker-py` (Python 2.6). The error was: No module named docker"}
+2020-01-24 09:05:27,568 p=10730 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 09:05:27,568 p=10730 u=mobius n=ansible | seven.mobius.lab           : ok=12   changed=0    unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+2020-01-24 10:23:48,697 p=11068 u=mobius n=ansible | seven.mobius.lab | CHANGED | rc=0 >>
+Using default tag: latest
+latest: Pulling from devopsedu/webapp
+a48c500ed24e: Pulling fs layer
+1e1de00ff7e1: Pulling fs layer
+0330ca45a200: Pulling fs layer
+471db38bcfbf: Pulling fs layer
+0b4aba487617: Pulling fs layer
+c2e32ec79cfd: Pulling fs layer
+7a1cc782c1ae: Pulling fs layer
+0b4aba487617: Waiting
+471db38bcfbf: Waiting
+c2e32ec79cfd: Waiting
+7a1cc782c1ae: Waiting
+1e1de00ff7e1: Verifying Checksum
+1e1de00ff7e1: Download complete
+0330ca45a200: Verifying Checksum
+0330ca45a200: Download complete
+471db38bcfbf: Verifying Checksum
+471db38bcfbf: Download complete
+0b4aba487617: Download complete
+7a1cc782c1ae: Download complete
+a48c500ed24e: Verifying Checksum
+a48c500ed24e: Download complete
+c2e32ec79cfd: Verifying Checksum
+c2e32ec79cfd: Download complete
+a48c500ed24e: Pull complete
+1e1de00ff7e1: Pull complete
+0330ca45a200: Pull complete
+471db38bcfbf: Pull complete
+0b4aba487617: Pull complete
+c2e32ec79cfd: Pull complete
+7a1cc782c1ae: Pull complete
+Digest: sha256:5c95d950c1638308e879edcbfba0fb5d856df594416c87a5639da02703a1b834
+Status: Downloaded newer image for devopsedu/webapp:latest
+docker.io/devopsedu/webapp:latest
+
+2020-01-24 10:26:23,569 p=11118 u=mobius n=ansible | PLAY [Install docker] ************************************************************************************************************************************************************************************************************************
+2020-01-24 10:26:23,585 p=11118 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 10:26:25,728 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:25,753 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 10:26:25,983 p=11118 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/setup-RedHat.yml for seven.mobius.lab
+2020-01-24 10:26:26,010 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure old versions of Docker are not installed.] *****************************************************************************************************************************************************************
+2020-01-24 10:26:28,865 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:28,888 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker GPG key.] **********************************************************************************************************************************************************************************************
+2020-01-24 10:26:29,795 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:29,820 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Add Docker repository.] *******************************************************************************************************************************************************************************************
+2020-01-24 10:26:30,601 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:30,625 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Edge repo.] **************************************************************************************************************************************************************************************
+2020-01-24 10:26:31,234 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:31,258 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Configure Docker Test repo.] **************************************************************************************************************************************************************************************
+2020-01-24 10:26:31,648 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:31,672 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Install containerd separately (CentOS 8).] ************************************************************************************************************************************************************************
+2020-01-24 10:26:31,711 p=11118 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 10:26:31,734 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 10:26:31,772 p=11118 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 10:26:31,797 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker.] **************************************************************************************************************************************************************************************************
+2020-01-24 10:26:32,503 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:32,531 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Ensure Docker is started and enabled at boot.] ********************************************************************************************************************************************************************
+2020-01-24 10:26:33,503 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:33,527 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 10:26:33,593 p=11118 u=mobius n=ansible | included: /home/mobius/ansible/roles/geerlingguy.docker/tasks/docker-compose.yml for seven.mobius.lab
+2020-01-24 10:26:33,622 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Check current docker-compose version.] ****************************************************************************************************************************************************************************
+2020-01-24 10:26:34,205 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:34,229 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Delete existing docker-compose version if it's different.] ********************************************************************************************************************************************************
+2020-01-24 10:26:34,268 p=11118 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 10:26:34,292 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : Install Docker Compose (if configured).] **************************************************************************************************************************************************************************
+2020-01-24 10:26:35,319 p=11118 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 10:26:35,343 p=11118 u=mobius n=ansible | TASK [geerlingguy.docker : include_tasks] ****************************************************************************************************************************************************************************************************
+2020-01-24 10:26:35,381 p=11118 u=mobius n=ansible | skipping: [seven.mobius.lab]
+2020-01-24 10:26:35,405 p=11118 u=mobius n=ansible | TASK [Pull docker containter] ****************************************************************************************************************************************************************************************************************
+2020-01-24 10:26:36,489 p=11118 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 10:26:36,491 p=11118 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 10:26:36,492 p=11118 u=mobius n=ansible | seven.mobius.lab           : ok=13   changed=1    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2020-01-24 12:18:58,411 p=11410 u=mobius n=ansible | ERROR! Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/mobius/ansible/deploy_php.yml': line 23, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      copy: src=~/dockerfile dest=~/docker
+        remote: yes
+              ^ here
+
+2020-01-24 12:19:39,608 p=11418 u=mobius n=ansible | [DEPRECATION WARNING]: docker is kept for backwards compatibility but usage is discouraged. The module documentation details page may explain more about this rationale.. This feature will be removed in a future release. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-01-24 12:19:39,685 p=11418 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:19:39,698 p=11418 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:19:41,715 p=11418 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:19:41,739 p=11418 u=mobius n=ansible | TASK [include_tasks] *************************************************************************************************************************************************************************************************************************
+2020-01-24 12:19:41,775 p=11418 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"reason": "conflicting action statements: hosts, gather_facts\n\nThe error appears to be in '/home/mobius/ansible/install_docker.yml': line 2, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n---\n- name: Install docker\n  ^ here\n"}
+2020-01-24 12:19:41,776 p=11418 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:19:41,776 p=11418 u=mobius n=ansible | seven.mobius.lab           : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:20:14,263 p=11447 u=mobius n=ansible | [DEPRECATION WARNING]: docker is kept for backwards compatibility but usage is discouraged. The module documentation details page may explain more about this rationale.. This feature will be removed in a future release. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2020-01-24 12:20:14,341 p=11447 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:20:14,354 p=11447 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:20:15,887 p=11447 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:20:15,912 p=11447 u=mobius n=ansible | TASK [include_tasks] *************************************************************************************************************************************************************************************************************************
+2020-01-24 12:20:15,947 p=11447 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"reason": "conflicting action statements: hosts, gather_facts\n\nThe error appears to be in '/home/mobius/ansible/install_docker.yml': line 2, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n---\n- name: Install docker\n  ^ here\n"}
+2020-01-24 12:20:15,948 p=11447 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:20:15,948 p=11447 u=mobius n=ansible | seven.mobius.lab           : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:26:53,014 p=11509 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:26:53,028 p=11509 u=mobius n=ansible | ERROR! failed to combine variables, expected dicts but got a 'dict' and a 'AnsibleSequence': 
+{}
+[{"become_pass": "P3n!$$$"}]
+2020-01-24 12:29:25,195 p=11523 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:29:25,213 p=11523 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:29:25,250 p=11523 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 12:29:25,251 p=11523 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:29:25,252 p=11523 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:31:20,778 p=11561 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:31:20,796 p=11561 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:31:22,862 p=11561 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:31:22,886 p=11561 u=mobius n=ansible | TASK [include_tasks] *************************************************************************************************************************************************************************************************************************
+2020-01-24 12:31:22,949 p=11561 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"reason": "conflicting action statements: hosts, roles\n\nThe error appears to be in '/home/mobius/ansible/install_docker.yml': line 2, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n---\n- name: Install docker\n  ^ here\n"}
+2020-01-24 12:31:22,950 p=11561 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:31:22,951 p=11561 u=mobius n=ansible | seven.mobius.lab           : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:47:58,455 p=11598 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:47:58,473 p=11598 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:48:00,518 p=11598 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:48:00,543 p=11598 u=mobius n=ansible | TASK [include_tasks] *************************************************************************************************************************************************************************************************************************
+2020-01-24 12:48:00,603 p=11598 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"reason": "conflicting action statements: hosts, roles\n\nThe error appears to be in '/home/mobius/ansible/install_docker.yml': line 2, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n---\n- name: Install docker\n  ^ here\n"}
+2020-01-24 12:48:00,604 p=11598 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:48:00,605 p=11598 u=mobius n=ansible | seven.mobius.lab           : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:49:02,385 p=11628 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:49:02,399 p=11628 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:49:04,229 p=11628 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:49:04,253 p=11628 u=mobius n=ansible | TASK [Making docker container directories] ***************************************************************************************************************************************************************************************************
+2020-01-24 12:49:04,853 p=11628 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 12:49:04,855 p=11628 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:49:04,856 p=11628 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:49:47,870 p=11665 u=mobius n=ansible | ERROR! Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/home/mobius/ansible/deploy_php.yml': line 12, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        state: directory
+     - name: Deploy container
+     ^ here
+
+2020-01-24 12:50:16,092 p=11672 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:16,106 p=11672 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:18,004 p=11672 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:50:18,028 p=11672 u=mobius n=ansible | TASK [Making docker container directories] ***************************************************************************************************************************************************************************************************
+2020-01-24 12:50:18,615 p=11672 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 12:50:18,639 p=11672 u=mobius n=ansible | TASK [Deploy container] **********************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:19,448 p=11672 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"changed": false, "msg": "value of state must be one of: absent, present, started, stopped, got: starteid"}
+2020-01-24 12:50:19,449 p=11672 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:19,450 p=11672 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:50:35,430 p=11713 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:35,445 p=11713 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:36,981 p=11713 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:50:37,005 p=11713 u=mobius n=ansible | TASK [Making docker container directories] ***************************************************************************************************************************************************************************************************
+2020-01-24 12:50:37,592 p=11713 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 12:50:37,615 p=11713 u=mobius n=ansible | TASK [Deploy container] **********************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:38,424 p=11713 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker (Python >= 2.7) or docker-py (Python 2.6)) on localhost.localdomain's Python /usr/bin/python. Please read module documentation and install in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` or `pip install docker-py` (Python 2.6). The error was: No module named docker"}
+2020-01-24 12:50:38,426 p=11713 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:50:38,426 p=11713 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 12:58:35,721 p=11799 u=mobius n=ansible | PLAY [centos] ********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:58:35,736 p=11799 u=mobius n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2020-01-24 12:58:37,765 p=11799 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 12:58:37,789 p=11799 u=mobius n=ansible | TASK [Making docker container directories] ***************************************************************************************************************************************************************************************************
+2020-01-24 12:58:38,378 p=11799 u=mobius n=ansible | changed: [seven.mobius.lab]
+2020-01-24 12:58:38,402 p=11799 u=mobius n=ansible | TASK [Deploy container] **********************************************************************************************************************************************************************************************************************
+2020-01-24 12:58:39,224 p=11799 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker (Python >= 2.7) or docker-py (Python 2.6)) on localhost.localdomain's Python /usr/bin/python. Please read module documentation and install in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` or `pip install docker-py` (Python 2.6). The error was: No module named docker"}
+2020-01-24 12:58:39,225 p=11799 u=mobius n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2020-01-24 12:58:39,225 p=11799 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 13:38:42,246 p=13124 u=mobius n=ansible | PLAY [centos] **********************************************************************************************************************************************************************************************
+2020-01-24 13:38:42,264 p=13124 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 13:38:42,330 p=13124 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 13:38:42,332 p=13124 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 13:38:42,332 p=13124 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 13:39:10,621 p=13136 u=mobius n=ansible | PLAY [centos] **********************************************************************************************************************************************************************************************
+2020-01-24 13:39:10,636 p=13136 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 13:39:10,672 p=13136 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 13:39:10,674 p=13136 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 13:39:10,674 p=13136 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 13:40:24,080 p=13149 u=mobius n=ansible | PLAY [centos] **********************************************************************************************************************************************************************************************
+2020-01-24 13:40:24,095 p=13149 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 13:40:24,132 p=13149 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 13:40:24,134 p=13149 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 13:40:24,134 p=13149 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 13:41:07,897 p=13163 u=mobius n=ansible | PLAY [centos] **********************************************************************************************************************************************************************************************
+2020-01-24 13:41:07,912 p=13163 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 13:41:07,950 p=13163 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 13:41:07,952 p=13163 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 13:41:07,952 p=13163 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 13:42:36,857 p=13180 u=mobius n=ansible | ERROR! The vault password file /home/mobius/ansible/.vault/ansible.yml was not found
+2020-01-24 13:42:52,200 p=13189 u=mobius n=ansible | [WARNING]: Error in vault password file loading (default): Invalid vault password was provided from file (/home/mobius/ansible/.vault/ansible.yml)
+
+2020-01-24 13:42:52,200 p=13189 u=mobius n=ansible | ERROR! Invalid vault password was provided from file (/home/mobius/ansible/.vault/ansible.yml)
+2020-01-24 13:43:32,906 p=13193 u=mobius n=ansible | ERROR! .vault/ansible.yml exists, please use 'edit' instead
+2020-01-24 13:43:48,386 p=13196 u=mobius n=ansible | ERROR! input is not vault encrypted data for /home/mobius/ansible/.vault/ansible.yml
+2020-01-24 13:43:59,192 p=13199 u=mobius n=ansible | ERROR! input is not vault encrypted data for /home/mobius/ansible/.vault/ansible.yml
+2020-01-24 13:44:31,346 p=13202 u=mobius n=ansible | Encryption successful
+2020-01-24 13:44:53,832 p=13208 u=mobius n=ansible |  [ERROR]: User interrupted execution
+
+2020-01-24 13:50:23,021 p=13268 u=mobius n=ansible | Decryption successful
+2020-01-24 13:52:52,404 p=13286 u=mobius n=ansible |  [ERROR]: User interrupted execution
+
+2020-01-24 13:53:58,616 p=13296 u=mobius n=ansible | Encryption successful
+2020-01-24 13:59:54,377 p=13319 u=mobius n=ansible | ERROR! 'var_prompt' is not a valid attribute for a Play
+
+The error appears to be in '/home/mobius/ansible/ping.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: ping
+  ^ here
+
+2020-01-24 14:00:16,618 p=13326 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 14:00:16,633 p=13326 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 14:00:16,648 p=13326 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 14:00:16,649 p=13326 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 14:00:16,649 p=13326 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:37:35,411 p=13563 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:37:35,427 p=13563 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:37:35,442 p=13563 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 16:37:35,444 p=13563 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:37:35,444 p=13563 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:39:43,802 p=13584 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:39:43,816 p=13584 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:39:43,831 p=13584 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 16:39:43,832 p=13584 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:39:43,833 p=13584 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:40:29,797 p=13604 u=mobius n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: cento
+
+2020-01-24 16:40:29,797 p=13604 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:40:29,797 p=13604 u=mobius n=ansible | skipping: no hosts matched
+2020-01-24 16:40:29,798 p=13604 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:40:34,167 p=13610 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:40:34,182 p=13610 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:40:34,197 p=13610 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 16:40:34,199 p=13610 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:40:34,199 p=13610 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:43:42,640 p=13624 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:43:42,656 p=13624 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:43:42,673 p=13624 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 16:43:42,675 p=13624 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:43:42,676 p=13624 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:43:54,182 p=13635 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:43:54,196 p=13635 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:43:54,211 p=13635 u=mobius n=ansible | fatal: [seven.mobius.lab]: FAILED! => {"msg": "The field 'become_pass' has an invalid value, which includes an undefined variable. The error was: 'become_pass' is undefined"}
+2020-01-24 16:43:54,212 p=13635 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:43:54,213 p=13635 u=mobius n=ansible | seven.mobius.lab           : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:44:40,357 p=13646 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:44:40,374 p=13646 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:44:42,992 p=13646 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:44:43,018 p=13646 u=mobius n=ansible | TASK [Pinging 'centos'] ************************************************************************************************************************************************************************************
+2020-01-24 16:44:43,541 p=13646 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:44:43,543 p=13646 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:44:43,543 p=13646 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:45:29,027 p=13692 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with yaml plugin: Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in
+'/home/mobius/ansible/hosts': line 2, column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [control] 127.0.0.1 ^ here
+
+2020-01-24 16:45:29,028 p=13692 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with ini plugin: /home/mobius/ansible/hosts:11: Expected key=value, got: ansible_password_file: ~/ansible/.vault/vpf
+
+2020-01-24 16:45:29,028 p=13692 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:45:29,028 p=13692 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:45:29,029 p=13692 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:45:31,652 p=13692 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:45:31,666 p=13692 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:45:32,932 p=13692 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:45:32,958 p=13692 u=mobius n=ansible | TASK [Pinging 'centos'] ************************************************************************************************************************************************************************************
+2020-01-24 16:45:33,478 p=13692 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:45:33,480 p=13692 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:45:33,480 p=13692 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:48:43,134 p=13736 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:48:43,135 p=13736 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:48:43,135 p=13736 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:48:45,334 p=13736 u=mobius n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: centos
+
+2020-01-24 16:48:45,335 p=13736 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:48:45,335 p=13736 u=mobius n=ansible | skipping: no hosts matched
+2020-01-24 16:48:45,335 p=13736 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:49:04,659 p=13745 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:49:04,659 p=13745 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:49:04,660 p=13745 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:49:06,582 p=13745 u=mobius n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: centos
+
+2020-01-24 16:49:06,582 p=13745 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:49:06,583 p=13745 u=mobius n=ansible | skipping: no hosts matched
+2020-01-24 16:49:06,583 p=13745 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:49:31,093 p=13752 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:49:31,093 p=13752 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:49:31,094 p=13752 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:49:33,042 p=13752 u=mobius n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: centos
+
+2020-01-24 16:49:33,042 p=13752 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:49:33,042 p=13752 u=mobius n=ansible | skipping: no hosts matched
+2020-01-24 16:49:33,043 p=13752 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:50:50,140 p=13759 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with yaml plugin: Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in
+'/home/mobius/ansible/hosts': line 2, column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [control] 127.0.0.1 ^ here
+
+2020-01-24 16:50:50,140 p=13759 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with ini plugin: /home/mobius/ansible/hosts:8: Expected key=value, got: become_pass: P3n!$$$
+
+2020-01-24 16:50:50,140 p=13759 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:50:50,141 p=13759 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:50:50,141 p=13759 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:50:52,951 p=13759 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:50:52,965 p=13759 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:50:54,661 p=13759 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:50:54,688 p=13759 u=mobius n=ansible | TASK [Pinging 'centos'] ************************************************************************************************************************************************************************************
+2020-01-24 16:50:55,193 p=13759 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:50:55,196 p=13759 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:50:55,196 p=13759 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:51:11,953 p=13790 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with yaml plugin: Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in
+'/home/mobius/ansible/hosts': line 2, column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [control] 127.0.0.1 ^ here
+
+2020-01-24 16:51:11,954 p=13790 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with ini plugin: /home/mobius/ansible/hosts:8: Expected key=value, got: become_pass: P3n!$$$
+
+2020-01-24 16:51:11,954 p=13790 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:51:11,954 p=13790 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:51:11,955 p=13790 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:51:14,075 p=13790 u=mobius n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: cetnos
+
+2020-01-24 16:51:14,076 p=13790 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:51:14,076 p=13790 u=mobius n=ansible | skipping: no hosts matched
+2020-01-24 16:51:14,076 p=13790 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:51:15,953 p=13796 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with yaml plugin: Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in
+'/home/mobius/ansible/hosts': line 2, column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [control] 127.0.0.1 ^ here
+
+2020-01-24 16:51:15,954 p=13796 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with ini plugin: /home/mobius/ansible/hosts:8: Expected key=value, got: become_pass: P3n!$$$
+
+2020-01-24 16:51:15,954 p=13796 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:51:15,955 p=13796 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:51:15,956 p=13796 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:51:19,114 p=13796 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:51:19,128 p=13796 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:51:20,473 p=13796 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:51:20,498 p=13796 u=mobius n=ansible | TASK [Pinging 'centos'] ************************************************************************************************************************************************************************************
+2020-01-24 16:51:21,002 p=13796 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:51:21,005 p=13796 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:51:21,005 p=13796 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:51:51,490 p=13825 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with yaml plugin: Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in
+'/home/mobius/ansible/hosts': line 3, column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [control] 127.0.0.1 ^ here
+
+2020-01-24 16:51:51,490 p=13825 u=mobius n=ansible | [WARNING]:  * Failed to parse /home/mobius/ansible/hosts with ini plugin: Invalid host pattern '---' supplied, '---' is normally a sign this is a YAML file.
+
+2020-01-24 16:51:51,491 p=13825 u=mobius n=ansible | [WARNING]: Unable to parse /home/mobius/ansible/hosts as an inventory source
+
+2020-01-24 16:51:51,491 p=13825 u=mobius n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-01-24 16:51:51,492 p=13825 u=mobius n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-01-24 16:51:53,942 p=13825 u=mobius n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: centos
+
+2020-01-24 16:51:53,942 p=13825 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:51:53,943 p=13825 u=mobius n=ansible | skipping: no hosts matched
+2020-01-24 16:51:53,943 p=13825 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:52:25,514 p=13832 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:52:25,528 p=13832 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:52:27,170 p=13832 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:52:27,197 p=13832 u=mobius n=ansible | TASK [Pinging 'centos'] ************************************************************************************************************************************************************************************
+2020-01-24 16:52:27,725 p=13832 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:52:27,727 p=13832 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:52:27,728 p=13832 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:52:36,346 p=13890 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:52:36,363 p=13890 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:52:37,737 p=13890 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:52:37,770 p=13890 u=mobius n=ansible | TASK [Pinging 'centos'] ************************************************************************************************************************************************************************************
+2020-01-24 16:52:38,272 p=13890 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:52:38,274 p=13890 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:52:38,275 p=13890 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-01-24 16:52:55,127 p=13918 u=mobius n=ansible | PLAY [ping] ************************************************************************************************************************************************************************************************
+2020-01-24 16:52:55,141 p=13918 u=mobius n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************
+2020-01-24 16:52:56,502 p=13918 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:52:56,527 p=13918 u=mobius n=ansible | TASK [Pinging 'centos'] ************************************************************************************************************************************************************************************
+2020-01-24 16:52:57,029 p=13918 u=mobius n=ansible | ok: [seven.mobius.lab]
+2020-01-24 16:52:57,032 p=13918 u=mobius n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2020-01-24 16:52:57,032 p=13918 u=mobius n=ansible | seven.mobius.lab           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

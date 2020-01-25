@@ -1,0 +1,25 @@
+--- # Deploys devopsedu/webapp with php docker file
+- hosts: centos
+  become: yes
+  vars:
+    container_name: edurekaphp
+    ansible_become_pass: '{{ become_pass }}'
+  tasks:
+    - name: Making docker container directories
+      file:
+        path: ~/docker/ "{{ container_name }}"
+        state: directory
+    - name: Deploy container
+      docker_container:
+        name: edurekaphp
+        image: devopsedu/webapp
+        state: started
+        volumes: ~/docker/ "{{ container_name }}"
+        ports:
+          - "80:8080"
+      # - name: Copy dockerfile
+      # copy: src=~/dockerfile dest=~/docker
+      #- name: Run docker container
+      #docker:
+      #  run:
+        

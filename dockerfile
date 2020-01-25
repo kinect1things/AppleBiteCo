@@ -1,4 +1,5 @@
-FROM devopsedu/webapp
-ADD proj /var/www/html
-RUN rm /var/www/html/index.html
-CMD apachectl -D FOREGROUND
+FROM devopsedu/webapp:latest
+RUN apt-get update
+COPY src ./html
+RUN chown -R www-data:www-data html
+EXPOSE 80
