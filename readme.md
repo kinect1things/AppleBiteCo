@@ -8,15 +8,21 @@ The company’s goal is to deliver the product updates frequently to production 
 As development progressed, they are facing multiple problems, because of various technologies involved in the project. Following are the problems: 
 
 •	Building Complex builds is difficult 
+
 •	Manual efforts to test various components/modules of the project 
+
 •	Incremental builds are difficult to manage, test and deploy 
 
 To solve these problems, they need to implement Continuous Integration & Continuous Deployment with DevOps using following tools:  
 
 •	Git – For version control for tracking changes in the code files 
+
 •	Jenkins – For continuous integration and continuous deployment 
+
 •	Docker – For deploying containerized applications 
+
 •	Puppet/Ansible - Configuration management tools 
+
 •	Selenium - For automating tests on the deployed web application This project will be about how to do deploy code to dev/stage/prod etc, just on a click of button.  
  
 Link for the sample PHP application: https://github.com/edureka-devops/projCert.git
@@ -30,17 +36,24 @@ The deployment should then be tested using a test automation tool, and if the bu
 All this should happen automatically and should be triggered from a push to the GitHub master branch.   
 
 Steps for executing the solution:
----
 •	Use the Master VM for Jenkins, Ansible, Puppet, GIT etc. 
+
 •	Use the Clean Ubuntu VM image provided in the “Edureka Setup Guide” for Jenkins Slave Node (Test Server) 
+
 •	Change the IP address of the VMs accordingly 
+
 •	Add Build Pipeline Plugin and Post-build task plugin to Jenkins on the master VM 
+
 •	Install python, openssh-server and git on the slave node manually 
+
 •	Set up the necessary tools such as git, chromedriver(selenium), chromium browser(selenium) on the slave node through Ansible 
+
 •	Use the image devopsedu/webapp and add your PHP website to it using a Dockerfile 
+
 •	Create a Selenium Test for your PHP website. It should click on “About” and verify the text written in it. This will conclude the website is deployed and is running fine. 
+
 •	Push the PHP website, Dockerfile and Selenium JAR to a git repository
----
+
 Below tasks should be automated through Jenkins by creating a pipeline: 
 
 1.	Install and configure puppet agent on the slave node (Job 1) 
