@@ -30,7 +30,7 @@ The deployment should then be tested using a test automation tool, and if the bu
 All this should happen automatically and should be triggered from a push to the GitHub master branch.   
 
 Steps for executing the solution:
-
+---
 •	Use the Master VM for Jenkins, Ansible, Puppet, GIT etc. 
 •	Use the Clean Ubuntu VM image provided in the “Edureka Setup Guide” for Jenkins Slave Node (Test Server) 
 •	Change the IP address of the VMs accordingly 
@@ -40,7 +40,7 @@ Steps for executing the solution:
 •	Use the image devopsedu/webapp and add your PHP website to it using a Dockerfile 
 •	Create a Selenium Test for your PHP website. It should click on “About” and verify the text written in it. This will conclude the website is deployed and is running fine. 
 •	Push the PHP website, Dockerfile and Selenium JAR to a git repository
-
+---
 Below tasks should be automated through Jenkins by creating a pipeline: 
 
 1.	Install and configure puppet agent on the slave node (Job 1) 
